@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">₿</span>
+          <span class="logo-text">CryptoTrack</span>
+        </div>
+        <div class="header-meta">
+          <span class="live-dot"></span>
+          <span class="live-label">Live Prices</span>
+          <span class="last-updated" id="lastUpdated">Updated just now</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+   
+      <section class="summary-cards">
+        <div class="card summary-card">
+          <div class="summary-label">Total Portfolio Value</div>
+          <div class="summary-value" id="totalValue">$0.00</div>
+          <div class="summary-sub" id="totalChange">+$0.00 today</div>
+        </div>
+        <div class="card summary-card">
+          <div class="summary-label">Best Performer</div>
+          <div class="summary-value" id="bestCoin">—</div>
+          <div class="summary-sub gain" id="bestChange">—</div>
+        </div>
+        <div class="card summary-card">
+          <div class="summary-label">Worst Performer</div>
+          <div class="summary-value" id="worstCoin">—</div>
+          <div class="summary-sub loss" id="worstChange">—</div>
+        </div>
+        <div class="card summary-card">
+          <div class="summary-label">Holdings</div>
+          <div class="summary-value" id="holdingsCount">0 coins</div>
+          <div class="summary-sub" id="holdingsSub">in portfolio</div>
+        </div>
+      </section>
+
+     
+      <div class="grid-layout">
+
+       
+        <section class="card table-card">
+          <div class="card-header">
+            <h2 class="card-title">Your Holdings</h2>
+            <div class="search-wrap">
+              <input type="text" id="searchInput" class="search-input" placeholder="Search coin…" />
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="coin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Coin</th>
+                  <th>Price</th>
+                  <th>24h Change</th>
+                  <th>Holdings</th>
+                  <th>Value</th>
+                  <th>7d Trend</th>
+                </tr>
+              </thead>
+              <tbody id="coinTableBody">
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+       
+        <aside class="right-col">
+
+          
+          <div class="card pie-card">
+            <div class="card-header">
+              <h2 class="card-title">Portfolio Allocation</h2>
+            </div>
+            <div class="pie-wrap">
+              <canvas id="pieChart" width="220" height="220"></canvas>
+              <div class="pie-center" id="pieCenterLabel">
+                <div class="pie-center-value" id="pieCenterValue"></div>
+                <div class="pie-center-name" id="pieCenterName">Total</div>
+              </div>
+            </div>
+            <ul class="legend" id="pieLegend"></ul>
+          </div>
+
+         
+          <div class="card bar-card">
+            <div class="card-header">
+              <h2 class="card-title">24h Performance</h2>
+            </div>
+            <div class="bar-list" id="barList"></div>
+          </div>
+
+        </aside>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>Prices are simulated for demo purposes &mdash; CryptoTrack &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
