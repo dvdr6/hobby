@@ -43,6 +43,7 @@ Primary Purple: #9D4EDD | Deep Purple: #5A189A | Light Purple: #E0AAFF
 Clone the repository: `git clone https://github.com/dvdr6/hobby.git`
 Navigate to project: `cd hobby`
 Open in browser: `open index.html`
+OR just open github pages: `https://dvdr6.github.io/hobby`
 
 ## 📁 Project Structure
 
